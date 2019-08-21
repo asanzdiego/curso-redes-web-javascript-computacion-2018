@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="generator" content="pandoc">
+  <meta name="description" content="Computación" />
+  <meta name="author" content="Adolfo Sanz De Diego">
+  <title>Computación</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../lib/reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../lib/reveal.js-menu/menu.css">
+  <link rel="stylesheet" href="../lib/reveal.js/css/theme/beige.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="../lib/reveal.js/lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '../lib/reveal.js/css/print/pdf.css' : '../lib/reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+
+  <style type="text/css">
+    body {
+      background: white !important;
+      background-color: white !important;
+    }
+    code{
+      white-space: pre;
+    }
+    .reveal pre code {
+      background: rgba(255, 255, 255, 0.7);
+      color: rgba(0, 0, 0, 0.7);
+    }
+    .reveal section img {
+      margin: 15px 0px;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.9);
+    }
+    strong {
+      color: #777
+    }
+    a:hover {
+      text-decoration: underline !important;
+    }
+    h1.title {
+      font-size: 200% !important;
+    }
+    h1 {
+      font-size: 200% !important;
+    }
+    h2 {
+      font-size: 150% !important;
+    }
+    h3 {
+      font-size: 100% !important;
+    }
+    @media print {
+      #only-print-parent { display: table !important; }
+      #only-print-child { display: table-cell !important; vertical-align: middle;}
+      h1.title { font-size: 300% !important;}
+      h1 { font-size: 300% !important; }
+      h2 { font-size: 200% !important; }
+      h3 { font-size: 150% !important; }
+    }
+  </style>
+  <!--[if lt IE 9]>
+  <script src="../lib/reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="only-print-parent">
+    <div id="only-print-child">
+      <h1 class="title">Computación</h2>
+      <h2 class="author">Adolfo Sanz De Diego</h2>
+      <h3 class="date">Máster UAH</h3>
+    </div>
+</section>
+
+<section><section id="acerca-de" class="titleslide slide level1"><h1><span class="header-section-number">2</span> Acerca de</h1></section><section id="autor" class="slide level2">
+<h2><span class="header-section-number">2.1</span> Autor</h2>
+<ul>
+<li><strong>Adolfo Sanz De Diego</strong>
+<ul>
+<li>Blog: <a href="http://asanzdiego.blogspot.com.es/">asanzdiego.blogspot.com.es</a></li>
+<li>Correo: <a href="mailto:asanzdiego@gmail.com">asanzdiego@gmail.com</a></li>
+<li>GitHub: <a href="http://github.com/asanzdiego">github.com/asanzdiego</a></li>
+<li>Twitter: <a href="http://twitter.com/asanzdiego">twitter.com/asanzdiego</a></li>
+<li>Linkedin: <a href="http://www.linkedin.com/in/asanzdiego">in/asanzdiego</a></li>
+<li>SlideShare: <a href="http://www.slideshare.net/asanzdiego/">slideshare.net/asanzdiego</a></li>
+</ul></li>
+</ul>
+</section></section>
+<section><section id="complejidad-computacional" class="titleslide slide level1"><h1><span class="header-section-number">3</span> Complejidad computacional</h1></section><section id="introducción" class="slide level2">
+<h2><span class="header-section-number">3.1</span> Introducción</h2>
+<ul>
+<li><p>La teoría de la complejidad computacional trata de <strong>clasificar los problemas que pueden, o no pueden ser resueltos</strong> con una cantidad determinada de recursos (tiempo y memoria).</p></li>
+<li><p>A grandes rasgos, teoría de la complejidad computacional trata de clasificar los problemas que pueden, o no pueden ser resueltos por una computadora.</p></li>
+</ul>
+</section><section id="máquina-de-turing" class="slide level2">
+<h2><span class="header-section-number">3.2</span> Máquina de Turing</h2>
+<ul>
+<li><p>Una máquina de Turing es un dispositivo teórico que manipula símbolos sobre una tira de cinta de acuerdo a una tabla de reglas.</p></li>
+<li><p>Estudiando sus propiedades abstractas, ha servido de <strong>base para mucho desarrollo teórico</strong> en las ciencias de la computación y en la teoría de la complejidad.</p></li>
+</ul>
+<p><a href="https://www.youtube.com/watch?v=iaXLDz_UeYY">Vídeo &quot;¿Qué es una máquina de Turing?&quot;</a></p>
+</section><section id="algoritmo" class="slide level2">
+<h2><span class="header-section-number">3.3</span> Algoritmo</h2>
+<ul>
+<li><p>Un algoritmo es un <strong>conjunto prescrito de instrucciones o reglas bien definidas, ordenadas y finitas</strong> que permiten llevar a cabo una actividad mediante pasos sucesivos que no generen dudas a quien deba hacer dicha actividad.​</p></li>
+<li><p>Dados un estado inicial y una entrada, siguiendo los pasos sucesivos se llega a un estado final.</p></li>
+</ul>
+<p><a href="https://www.youtube.com/watch?v=U3CGMyjzlvM">Vídeo &quot;¿Qué es un algoritmo?&quot;</a></p>
+</section><section id="tiempos-polinómicos" class="slide level2">
+<h2><span class="header-section-number">3.4</span> Tiempos polinómicos</h2>
+<ul>
+<li><p>Cuando el tiempo de ejecución de un algoritmo se puede expresar usando una fórmula polinómica, se dice que dicho problema se puede resolver en un tiempo polinómico.</p></li>
+<li><p>Estos son <strong>&quot;buenos&quot; algoritmos</strong>.</p></li>
+</ul>
+</section><section id="tiempos-exponenciales" class="slide level2">
+<h2><span class="header-section-number">3.5</span> Tiempos exponenciales</h2>
+<ul>
+<li><p>Cuando el tiempo de ejecución de un algoritmo no se puede expresar usando una fórmula polinómica, se dice que dicho problema es de tiempo exponencial.</p></li>
+<li><p>Cuando un problema solo se puede resolver mediante algoritmos exponenciales, <strong>se dice que es intratable</strong>.</p></li>
+</ul>
+</section><section id="problemas-de-clase-np" class="slide level2">
+<h2><span class="header-section-number">3.6</span> Problemas de clase NP</h2>
+<ul>
+<li><p>La clase de complejidad NP consta de los problemas &quot;verificables&quot; en tiempo polinómico, es decir, dada una posible solución, esta se puede verificar en un tiempo polinómico por una máquina de Turing.</p></li>
+<li><p>A grandes rasgos, NP corresponde a la clase de problemas que, de manera realista, <strong>se pueden verificar con una computadora</strong>.</p></li>
+</ul>
+</section><section id="problemas-de-clase-p" class="slide level2">
+<h2><span class="header-section-number">3.7</span> Problemas de clase P</h2>
+<ul>
+<li><p>La clase de complejidad P contiene a aquellos problemas que se pueden resolver en tiempo polinómico por una máquina de Turing.</p></li>
+<li><p>A grandes rasgos, P corresponde a la clase de problemas que, de manera realista, <strong>se pueden resolver con una computadora</strong>.</p></li>
+<li><p>Los problemas de clase P siempre son de clase NP (si lo podemos resolver en tiempo polinómico, también podemos verificarlo en tiempo polinómico).</p></li>
+</ul>
+</section><section id="problemas-np-completo" class="slide level2">
+<h2><span class="header-section-number">3.8</span> Problemas NP-Completo</h2>
+<ul>
+<li><p>La clase de complejidad NP-Completo consta de los problemas &quot;verificables&quot; en tiempo polinómico, pero que no se ha encontrado un algoritmo que pueda resolver dicho problema en tiempo polinómico por una máquina de Turing.</p></li>
+<li><p>A grandes rasgos, NP-Completo corresponde a la clase de problemas que <strong>se pueden verificar de forma sencilla, pero solo se pueden resolver por fuerza bruta</strong>.</p></li>
+<li><p>Los problemas de clase NP-Completo siempre son de clase NP.</p></li>
+</ul>
+</section><section id="el-problema-pnp" class="slide level2">
+<h2><span class="header-section-number">3.9</span> El problema ¿P=NP?</h2>
+<ul>
+<li><p>La pregunta ¿P=NP? es <a href="https://es.wikipedia.org/wiki/Problemas_del_milenio">uno de los 7 problemas del milenio</a>.</p></li>
+<li><p>Si P=NP, cualquier problema polinómicamente verificable (NP) se podría resolver polinómicamente (P).</p></li>
+<li><p>Esto quiere decir que podríamos pues resolver los problemas de clase NP-Completo de forma polinómica.</p></li>
+</ul>
+<p><a href="https://www.youtube.com/watch?v=UR2oDYZ-Sao">Vídeo &quot;¿Qué es eso del problema P versus NP?&quot;</a></p>
+</section><section id="la-notación-o-grande" class="slide level2">
+<h2><span class="header-section-number">3.10</span> La notación O grande</h2>
+<ul>
+<li>Es una notación matemática que nos <strong>ayuda a describir el comportamiento de un algoritmo &quot;al límite&quot;</strong> en función de sus elementos de entrada N.</li>
+</ul>
+<figure>
+<img src="../img/big-o-complexity-chart.png" text-align="center" style="width:50.0%" />
+</figure>
+<p><a href="https://www.youtube.com/watch?v=v4cd1O4zkGw">Vídeo &quot;Big O Notation&quot;</a></p>
+</section><section id="tipos-de-complejidad" class="slide level2">
+<h2><span class="header-section-number">3.11</span> Tipos de complejidad</h2>
+<table>
+<thead>
+<tr class="header">
+<th>notación</th>
+<th>nombre</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>O(1)</td>
+<td>constante</td>
+</tr>
+<tr class="even">
+<td>O(log n)</td>
+<td>logarítmica</td>
+</tr>
+<tr class="odd">
+<td>O(n)</td>
+<td>lineal</td>
+</tr>
+<tr class="even">
+<td>O(n log n)</td>
+<td>lineal logarítmica</td>
+</tr>
+<tr class="odd">
+<td>O(n^2)</td>
+<td>cuadrática</td>
+</tr>
+<tr class="even">
+<td>O(2^n)</td>
+<td>exponencial</td>
+</tr>
+<tr class="odd">
+<td>O(n!)</td>
+<td>factorial</td>
+</tr>
+</tbody>
+</table>
+</section><section id="ejemplos-de-algoritmos" class="slide level2">
+<h2><span class="header-section-number">3.12</span> Ejemplos de algoritmos</h2>
+<p><a href="https://www.toptal.com/developers/sorting-algorithms">Sorting Algorithms Animations</a></p>
+<p><a href="https://codeburst.io/binary-search-algorithm-implementation-in-javascript-76228964c1b">Binary search algorithm implementation in javascript</a></p>
+<p><a href="https://www.youtube.com/watch?v=607Y3dJGUHI">Vídeo &quot;Algoritmo de Dijkstra&quot;</a></p>
+</section></section>
+<section><section id="estructuras-de-datos" class="titleslide slide level1"><h1><span class="header-section-number">4</span> Estructuras de datos</h1></section><section id="listas-enlazadas" class="slide level2">
+<h2><span class="header-section-number">4.1</span> Listas enlazadas</h2>
+<ul>
+<li>Una lista enlazada es una colección de nodos donde <strong>cada nodo tiene una conexión con el siguiente</strong> nodo.</li>
+</ul>
+<figure>
+<img src="../img/linked-list.png" text-align="center" style="width:50.0%" />
+</figure>
+<p><a href="https://codeburst.io/datastructures-what-is-a-linkedlist-6840cdd5915b">DataStructures: Implementation of Linked List in JavaScript</a></p>
+</section><section id="listas-doblemente-enlazadas" class="slide level2">
+<h2><span class="header-section-number">4.2</span> Listas doblemente enlazadas</h2>
+<ul>
+<li>En una lista doblemente enlazada, <strong>cada nodo tiene una referencia al nodo anterior y al siguiente</strong>.</li>
+</ul>
+<figure>
+<img src="../img/doubly-linked-list.png" text-align="center" style="width:50.0%" />
+</figure>
+<p><a href="https://codeburst.io/doubly-linked-list-implementation-in-javascript-a3df5e56869b">Doubly Linked List Implementation in JavaScript</a></p>
+</section><section id="pilas-y-colas" class="slide level2">
+<h2><span class="header-section-number">4.3</span> Pilas y colas</h2>
+<ul>
+<li><p>Una <strong>pila es un conjunto de elementos que utilizan el principio LIFO</strong> (Last In First Out), es decir, el último elemento que introdujimos será el primero en ser retirado.</p></li>
+<li><p>Una <strong>cola es un conjunto de elementos que utilizan el principio FIFO</strong> (First In First Out), es decir, el primer elemento que introdujimos será el primero en ser retirado.</p></li>
+</ul>
+<figure>
+<img src="../img/stack-and-queues.png" text-align="center" style="width:50.0%" />
+</figure>
+<p><a href="https://codeburst.io/stacks-and-queues-in-javascript-f60a9c4728d0">Stacks and Queues in JavaScript</a></p>
+</section><section id="árboles" class="slide level2">
+<h2><span class="header-section-number">4.4</span> Árboles</h2>
+<ul>
+<li>Un árbol es una <strong>estructura de datos no lineal</strong> comparada con las pilas y colas, las listas enlazadas y las matrices que son estructuras de datos lineales.</li>
+</ul>
+<figure>
+<img src="../img/tree.png" text-align="center" style="width:50.0%" />
+</figure>
+<p><a href="https://codeburst.io/tree-data-structure-in-javascript-1b4294db53aa">Tree Data structure in Javascript</a></p>
+</section></section>
+<section><section id="teoría-de-grafos" class="titleslide slide level1"><h1><span class="header-section-number">5</span> Teoría de grafos</h1></section><section id="grafos" class="slide level2">
+<h2><span class="header-section-number">5.1</span> Grafos</h2>
+<ul>
+<li>Un grafo G=(V,A) es una pareja ordenada en la que <strong>V es un conjunto no vacío de vértices y A es un conjunto de aristas</strong>.</li>
+</ul>
+<p><a href="https://www.youtube.com/watch?v=gXgEDyodOJU">Data structures: Introduction to graphs</a></p>
+</section><section id="grafos-no-dirigido" class="slide level2">
+<h2><span class="header-section-number">5.2</span> Grafos no dirigido</h2>
+<ul>
+<li>Si A consta de <strong>pares no ordenados de vértices</strong>, tales como {x,y} entonces se dice que x e y son adyacentes, y en el grafo se representa mediante una línea no orientada que una dichos vértices.</li>
+</ul>
+<figure>
+<img src="../img/ejemplo-grafo.png" text-align="center" style="width:50.0%" />
+</figure>
+</section><section id="grafos-dirigido" class="slide level2">
+<h2><span class="header-section-number">5.3</span> Grafos dirigido</h2>
+<ul>
+<li>Si A consta de <strong>pares ordenados de vértices</strong>, tales como (x,y) entonces se dice que x e y es un par ordenado, y en el grafo se representa con una flecha que una dichos vértices. A este tipo de grafos se le llama dígrafo y se denota D.</li>
+</ul>
+<figure>
+<img src="../img/ejemplo-digrafo.png" text-align="center" style="width:50.0%" />
+</figure>
+</section><section id="aplicaciones" class="slide level2">
+<h2><span class="header-section-number">5.4</span> Aplicaciones</h2>
+<ul>
+<li>Debido a la gran <strong>cantidad de aplicaciones en la optimización de recorridos, procesos, flujos, algoritmos de búsquedas</strong>, la teoría de grafos es actualmente muy usada en el campo de la informática, las ciencias de la computación y telecomunicaciones.</li>
+</ul>
+</section><section id="ejemplos" class="slide level2">
+<h2><span class="header-section-number">5.5</span> Ejemplos</h2>
+<p><img style="width:100%" src="../img/ejemplos-grafos-tabla.png"/></p>
+</section></section>
+<section><section id="bibliografía" class="titleslide slide level1"><h1><span class="header-section-number">6</span> Bibliografía</h1></section><section id="generales" class="slide level2">
+<h2><span class="header-section-number">6.1</span> Generales</h2>
+<p><a href="http://bigocheatsheet.com/">Big-O Algorithm Complexity Cheat Sheet</a></p>
+<p><a href="https://es.khanacademy.org/computing/computer-science/algorithms">Curso de Khan Academy &gt; Ciencias de la computación &gt; Algoritmos</a></p>
+<p><a href="https://github.com/trekhleb/javascript-algorithms">Algorithms and data structures implemented in JavaScript with explanations and links to further readings</a></p>
+</section><section id="turing-y-pnp" class="slide level2">
+<h2><span class="header-section-number">6.2</span> Turing y P=NP</h2>
+<p><a href="https://www.youtube.com/watch?v=U3CGMyjzlvM">Vídeo &quot;¿Qué es un algoritmo?&quot;</a></p>
+<p><a href="https://www.youtube.com/watch?v=iaXLDz_UeYY">Vídeo &quot;¿Qué es una máquina de Turing?&quot;</a></p>
+<p><a href="https://www.youtube.com/watch?v=UR2oDYZ-Sao">Vídeo &quot;¿Qué es eso del problema P versus NP?&quot;</a></p>
+</section><section id="big-o" class="slide level2">
+<h2><span class="header-section-number">6.3</span> Big O</h2>
+<p><a href="https://www.youtube.com/watch?v=v4cd1O4zkGw">Vídeo &quot;Big O Notation&quot;</a></p>
+<p><a href="https://codeburst.io/intro-to-the-big-o-ec96db047f81">Intro to Big O Notation</a></p>
+<p><a href="https://codeburst.io/intro-to-logarithms-big-o-c56a9ed840f8">Intro to Logarithms Big O</a></p>
+</section><section id="visualizadores" class="slide level2">
+<h2><span class="header-section-number">6.4</span> Visualizadores</h2>
+<p><a href="https://www.toptal.com/developers/sorting-algorithms">Sorting Algorithms Animations</a></p>
+<p><a href="https://www.youtube.com/watch?v=ZZuD6iUe3Pc">Vídeo &quot;Visualization and Comparison of Sorting Algorithms&quot;</a></p>
+<p><a href="http://algorithm-visualizer.org/">Algorithm Visualizer</a></p>
+<p><a href="https://mikedombo.github.io/graphPlayground/">Graph Algorithm Playground</a></p>
+</section><section id="algoritmos-de-ordenación" class="slide level2">
+<h2><span class="header-section-number">6.5</span> Algoritmos de ordenación</h2>
+<p><a href="https://codeburst.io/sorting-algorithms-beginners-guide-7b94a8e4dec">Sorting algorithms beginners guide</a></p>
+<p><a href="https://codeburst.io/bubble-sort-algorithm-in-javascript-3f2951d227c8">Bubble sort algorithm in JavaScript</a></p>
+<p><a href="https://codeburst.io/selection-sort-algorithm-in-javascript-44caa7b7cb88">Selection sort algorithm in javascript</a></p>
+<p><a href="https://codeburst.io/how-does-merge-sort-algorithm-works-666ee0b181f6">How does merge sort algorithm works?</a></p>
+<p><a href="https://codeburst.io/quicksort-algorithm-implementation-8a4f81c13a0c">Quicksort algorithm implementation</a></p>
+<p><a href="https://codeburst.io/what-is-radix-sort-7b631a1aab91">What is radix sort?</a></p>
+<p><a href="https://www.youtube.com/playlist?list=PLTd5ehIj0goPBr2ssWFrZvfE0tDTiEkIr">Lista de reproducción &quot;Algoritmos de ordenación&quot;</a></p>
+</section><section id="otros-algoritmos" class="slide level2">
+<h2><span class="header-section-number">6.6</span> Otros algoritmos</h2>
+<p><a href="https://codeburst.io/binary-search-algorithm-implementation-in-javascript-76228964c1b">Binary search algorithm implementation in javascript</a></p>
+<p><a href="https://hackernoon.com/how-to-implement-dijkstras-algorithm-in-javascript-abdfd1702d04">How to implement Dijkstra’s Algorithm in JavaScript</a></p>
+<p><a href="https://www.youtube.com/watch?v=607Y3dJGUHI">Vídeo &quot;Algoritmo de Dijkstra&quot;</a></p>
+</section><section id="estructuras-de-datos-1" class="slide level2">
+<h2><span class="header-section-number">6.7</span> Estructuras de datos</h2>
+<p><a href="https://codeburst.io/datastructures-what-is-a-linkedlist-6840cdd5915b">DataStructures: Implementation of Linked List in JavaScript</a></p>
+<p><a href="https://codeburst.io/doubly-linked-list-implementation-in-javascript-a3df5e56869b">Doubly Linked List Implementation in JavaScript</a></p>
+<p><a href="https://codeburst.io/stacks-and-queues-in-javascript-f60a9c4728d0">Stacks and Queues in JavaScript</a></p>
+<p><a href="https://codeburst.io/tree-data-structure-in-javascript-1b4294db53aa">Tree Data structure in Javascript</a></p>
+<p><a href="https://www.youtube.com/playlist?list=PLTd5ehIj0goMTSK7RRAPBF4wP-Nj5DRvT">Lista de reproducción &quot;Estructuras de datos&quot;</a></p>
+<p><a href="https://www.youtube.com/watch?v=gXgEDyodOJU">Data structures: Introduction to graphs</a></p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="../lib/reveal.js/lib/js/head.min.js"></script>
+  <script src="../lib/reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        pdfMaxPagesPerSlide: 1,
+        // Transition style
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1024,
+        height: 576,
+        // Factor of the display size that should remain empty around the content
+        margin: 0.3,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.1,
+        maxScale: 1.9,
+
+        menu: {
+            // Specifies which side of the presentation the menu will
+            // be shown. Use 'left' or 'right'.
+            side: 'left',
+
+            // Add slide numbers to the titles in the slide list.
+            // Use 'true' or format string (same as reveal.js slide numbers)
+            numbers: false,
+
+            // Specifies which slide elements will be used for generating
+            // the slide titles in the menu. The default selects the first
+            // heading element found in the slide, but you can specify any
+            // valid css selector and the text from the first matching
+            // element will be used.
+            // Note: that a section data-menu-title attribute or an element
+            // with a menu-title class will take precedence over this option
+            titleSelector: 'h1, h2, h3, h4, h5, h6',
+
+            // Hide slides from the menu that do not have a title.
+            // Set to 'true' to only list slides with titles.
+            hideMissingTitles: false,
+
+            // Add markers to the slide titles to indicate the
+            // progress through the presentation
+            markers: false,
+
+            // Specify custom panels to be included in the menu, by
+            // providing an array of objects with 'title', 'icon'
+            // properties, and either a 'src' or 'content' property.
+            custom: false,
+
+            // Specifies the themes that will be available in the themes
+            // menu panel. Set to 'false' to hide themes panel.
+            themes: [
+                { name: 'Black', theme: '../lib/reveal.js/css/theme/black.css' },
+                { name: 'White', theme: '../lib/reveal.js/css/theme/white.css' },
+                { name: 'League', theme: '../lib/reveal.js/css/theme/league.css' },
+                { name: 'Sky', theme: '../lib/reveal.js/css/theme/sky.css' },
+                { name: 'Beige', theme: '../lib/reveal.js/css/theme/beige.css' },
+                { name: 'Simple', theme: '../lib/reveal.js/css/theme/simple.css' },
+                { name: 'Serif', theme: '../lib/reveal.js/css/theme/serif.css' },
+                { name: 'Blood', theme: '../lib/reveal.js/css/theme/blood.css' },
+                { name: 'Night', theme: '../lib/reveal.js/css/theme/night.css' },
+                { name: 'Moon', theme: '../lib/reveal.js/css/theme/moon.css' },
+                { name: 'Solarized', theme: '../lib/reveal.js/css/theme/solarized.css' }
+            ],
+
+            // Specifies if the transitions menu panel will be shown.
+            transitions: true,
+
+            // Adds a menu button to the slides to open the menu panel.
+            // Set to 'false' to hide the button.
+            openButton: true,
+
+            // If 'true' allows the slide number in the presentation to
+            // open the menu panel. The reveal.js slideNumber option must
+            // be displayed for this to take effect
+            openSlideNumber: false,
+
+            // If true allows the user to open and navigate the menu using
+            // the keyboard. Standard keyboard interaction with reveal
+            // will be disabled while the menu is open.
+            keyboard: true
+        },
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: '../lib/reveal.js/plugin/notes/notes.js', async: true },
+          //{ src: '../lib/reveal.js/plugin/search/search.js', async: true },
+          { src: '../lib/reveal.js-menu/menu.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

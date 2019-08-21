@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Arrays</title>
+
+  <link rel="shortcut icon" type="image/png" href="../../jasmine-standalone-2.9.1/lib/jasmine-2.9.1/jasmine_favicon.png">
+  <link rel="stylesheet" href="../../jasmine-standalone-2.9.1/lib/jasmine-2.9.1/jasmine.css">
+
+  <script src="../../jasmine-standalone-2.9.1/lib/jasmine-2.9.1/jasmine.js"></script>
+  <script src="../../jasmine-standalone-2.9.1/lib/jasmine-2.9.1/jasmine-html.js"></script>
+  <script src="../../jasmine-standalone-2.9.1/lib/jasmine-2.9.1/boot.js"></script>
+
+</head>
+
+  <script>
+
+    var array = ["Pepito", "Fulanito", "Menganito"];
+    
+    describe("Arrays", function() {
+      
+      it('elements', function() {
+        //expect(array[0]).toEqual();
+        //expect(array[1]).toEqual();
+        //expect(array[2]).toEqual();
+        //expect(array[3]).toEqual();
+      });
+      
+      it('length', function() {
+        //expect(array.length).toEqual();
+      });
+
+      it('for', function() {
+        var result = ""
+        for (const element in array) {
+          result += " " + array[element];
+        }
+        //expect(result).toEqual();
+      });
+
+    });
+  </script>
+  
+<body>
+</body>
+</html>

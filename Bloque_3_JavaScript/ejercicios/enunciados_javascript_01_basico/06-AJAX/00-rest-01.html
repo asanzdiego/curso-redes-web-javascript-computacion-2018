@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Peticiones REST</title>
+    <script>
+        let url = "https://jsonplaceholder.typicode.com/users";
+        let xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function () {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                let elements = JSON.parse(xmlHttp.responseText);
+                let innerHTML = "Petición REST recibida<br/><br/>"
+                for (let i in elements) {
+                    //innerHTML += añadir el username y el email de cada usuario
+                }
+                let result = document.getElementById("result");
+                result.innerHTML = innerHTML;
+            }
+        }
+        xmlHttp.open("GET", url);
+        xmlHttp.send();
+    </script>
+</head>
+<body>
+    <h2>Peticiones REST</h2>
+    <div id="result"></div>
+</body>
+</html>

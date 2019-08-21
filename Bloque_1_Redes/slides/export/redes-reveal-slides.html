@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="generator" content="pandoc">
+  <meta name="description" content="REDES" />
+  <meta name="author" content="Adolfo Sanz De Diego">
+  <title>REDES</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../lib/reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../lib/reveal.js-menu/menu.css">
+  <link rel="stylesheet" href="../lib/reveal.js/css/theme/beige.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="../lib/reveal.js/lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '../lib/reveal.js/css/print/pdf.css' : '../lib/reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+
+  <style type="text/css">
+    body {
+      background: white !important;
+      background-color: white !important;
+    }
+    code{
+      white-space: pre;
+    }
+    .reveal pre code {
+      background: rgba(255, 255, 255, 0.7);
+      color: rgba(0, 0, 0, 0.7);
+    }
+    .reveal section img {
+      margin: 15px 0px;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.9);
+    }
+    strong {
+      color: #777
+    }
+    a:hover {
+      text-decoration: underline !important;
+    }
+    h1.title {
+      font-size: 200% !important;
+    }
+    h1 {
+      font-size: 200% !important;
+    }
+    h2 {
+      font-size: 150% !important;
+    }
+    h3 {
+      font-size: 100% !important;
+    }
+    @media print {
+      #only-print-parent { display: table !important; }
+      #only-print-child { display: table-cell !important; vertical-align: middle;}
+      h1.title { font-size: 300% !important;}
+      h1 { font-size: 300% !important; }
+      h2 { font-size: 200% !important; }
+      h3 { font-size: 150% !important; }
+    }
+  </style>
+  <!--[if lt IE 9]>
+  <script src="../lib/reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="only-print-parent">
+    <div id="only-print-child">
+      <h1 class="title">REDES</h2>
+      <h2 class="author">Adolfo Sanz De Diego</h2>
+      <h3 class="date">Máster UAH</h3>
+    </div>
+</section>
+
+<section><section id="acerca-de" class="titleslide slide level1"><h1><span class="header-section-number">2</span> Acerca de</h1></section><section id="autor" class="slide level2">
+<h2><span class="header-section-number">2.1</span> Autor</h2>
+<ul>
+<li><strong>Adolfo Sanz De Diego</strong>
+<ul>
+<li>Blog: <a href="http://asanzdiego.blogspot.com.es/">asanzdiego.blogspot.com.es</a></li>
+<li>Correo: <a href="mailto:asanzdiego@gmail.com">asanzdiego@gmail.com</a></li>
+<li>GitHub: <a href="http://github.com/asanzdiego">github.com/asanzdiego</a></li>
+<li>Twitter: <a href="http://twitter.com/asanzdiego">twitter.com/asanzdiego</a></li>
+<li>LinkedIn: <a href="http://www.linkedin.com/in/asanzdiego">in/asanzdiego</a></li>
+<li>SlideShare: <a href="http://www.slideshare.net/asanzdiego/">slideshare.net/asanzdiego</a></li>
+</ul></li>
+</ul>
+</section></section>
+<section><section id="el-modelo-osi" class="titleslide slide level1"><h1><span class="header-section-number">3</span> El modelo OSI</h1></section><section id="introducción" class="slide level2">
+<h2><span class="header-section-number">3.1</span> Introducción</h2>
+<ul>
+<li>El modelo OSI (Open Systems Interconnection Basic Reference Model) es el <strong>modelo de referencia para la descripción de las arquitecturas de redes</strong>.</li>
+<li>Antes del modelo OSI cada arquitectura de red dependía del fabricante y de protocolos propietarios.</li>
+<li>Aunque OSI sigue siendo el modelo teórico de referencia, en 1996 se renunció definitivamente a su implementación práctica debido a que, mientras se desarrollaban los trabajos de diseño y estandarización de OSI, el modelo TCP/IP se había ya convertido en el estándar.</li>
+</ul>
+</section><section id="capas" class="slide level2">
+<h2><span class="header-section-number">3.2</span> Capas</h2>
+<ul>
+<li>El modelo OSI <strong>se divide en capas</strong> de tal forma que cada capa resuelve un problema concreto y así la siguiente capa ya no ha de preocuparse de dicho problema.</li>
+<li>Esta arquitectura ayuda en el diseño de protocolos al tener estos menos funciones.</li>
+<li>Además los cambios en una capa no afectan al resto de capas.</li>
+</ul>
+</section><section id="capa-física" class="slide level2">
+<h2><span class="header-section-number">3.3</span> Capa física</h2>
+<ul>
+<li>La primera capa, la física, se encarga de <strong>transmitir bits a lo largo de un medio de transporte</strong>, ya sea de formá inalámbrica, por un cable de cobre o por fibra óptica.</li>
+</ul>
+</section><section id="capa-de-enlace" class="slide level2">
+<h2><span class="header-section-number">3.4</span> Capa de enlace</h2>
+<ul>
+<li>La segunda capa, la de enlace, se encarga de que la <strong>transmisión de datos sea fiable y libre de errores entre equipos directamente conectados</strong>.</li>
+<li>En esta capa se usan los protocolos Ethernet, WiFi, etc.</li>
+</ul>
+</section><section id="capa-de-red" class="slide level2">
+<h2><span class="header-section-number">3.5</span> Capa de red</h2>
+<ul>
+<li>La tercera capa, la de red, se encarga de la <strong>comunicación a través de una red entre equipos no conectados directamente</strong>.</li>
+<li>En esta capa se usa el protocolo IP (ya sea en su versión 4 o en su versión 6 más moderna).</li>
+</ul>
+</section><section id="capa-de-transporte" class="slide level2">
+<h2><span class="header-section-number">3.6</span> Capa de transporte</h2>
+<ul>
+<li>La cuarta capa, la de transporte, permite <strong>transmitir datos de forma óptima y libre de errores entre dos aplicaciones</strong>.</li>
+<li>En esta capa se usan 2 protocolos: el TCP (que es más fiable) y el UDP (que es más rápido).</li>
+</ul>
+</section><section id="capa-de-sesión" class="slide level2">
+<h2><span class="header-section-number">3.7</span> Capa de sesión</h2>
+<ul>
+<li>La quinta capa, la de sesión, permite <strong>indicar puntos en la comunicación para recuperar o continuar</strong> en uno de estos puntos.</li>
+</ul>
+</section><section id="capa-de-presentación" class="slide level2">
+<h2><span class="header-section-number">3.8</span> Capa de presentación</h2>
+<ul>
+<li>La sexta capa, la de presentación, define los <strong>formatos de representación de los datos</strong> (caracteres, números, imágenes, etc.)</li>
+</ul>
+</section><section id="capa-de-aplicación" class="slide level2">
+<h2><span class="header-section-number">3.9</span> Capa de aplicación</h2>
+<ul>
+<li>La séptima, la de aplicación, es la que se encarga de <strong>dar servicios a los usuarios</strong>. Existen muchos protocolos en esta capa: HTTP, SMTP, DNS, etc.</li>
+</ul>
+</section></section>
+<section><section id="el-modelo-tcpip" class="titleslide slide level1"><h1><span class="header-section-number">4</span> El modelo TCP/IP</h1></section><section id="introducción-1" class="slide level2">
+<h2><span class="header-section-number">4.1</span> Introducción</h2>
+<ul>
+<li>El modelo OSI (Open Systems Interconnection Basic Reference Model) es el modelo de referencia para la descripción de las arquitecturas de redes, pero se ha quedado en modelo teórico ya que el modelo TCP/IP se ha convertido en el estándar.</li>
+<li>Este último, al igual que el primero, <strong>se divide en capas, pero esta vez en vez de 7 son solo 4</strong>.</li>
+</ul>
+</section><section id="capa-de-red-1" class="slide level2">
+<h2><span class="header-section-number">4.2</span> Capa de red</h2>
+<ul>
+<li>La primera capa, la de acceso a la red, indica que <strong>hemos de disponer un enlace entre equipos</strong>.</li>
+<li>En esta capa se usan los protocolos Ethernet, WiFi, etc.</li>
+</ul>
+</section><section id="capa-de-internet" class="slide level2">
+<h2><span class="header-section-number">4.3</span> Capa de Internet</h2>
+<ul>
+<li>La segunda capa, la cada de Internet, permite la <strong>comunicación de paquetes a través de la red</strong>.</li>
+<li>En esta capa se usa el protocolo IP (ya sea en su versión 4 o en su versión 6 más moderna).</li>
+</ul>
+</section><section id="capa-de-trasporte" class="slide level2">
+<h2><span class="header-section-number">4.4</span> Capa de trasporte</h2>
+<ul>
+<li>La tercera capa, la de transporte, permite <strong>transmitir datos de forma óptima y libre de errores entre dos aplicaciones</strong>.</li>
+<li>En esta capa se usan 2 protocolos: el TCP (que es más fiable) y el UDP (que es más rápido).</li>
+</ul>
+</section><section id="capa-de-aplicación-1" class="slide level2">
+<h2><span class="header-section-number">4.5</span> Capa de aplicación</h2>
+<ul>
+<li>La cuarta capa, la de aplicación, es la que se encarga de <strong>dar servicios a los usuarios</strong>.</li>
+<li>Existen muchos protocolos en esta capa: HTTP, SMTP, DNS, etc.</li>
+</ul>
+</section></section>
+<section><section id="funcionamiento-tcpip" class="titleslide slide level1"><h1><span class="header-section-number">5</span> Funcionamiento TCP/IP</h1></section><section id="cabecera-paquete" class="slide level2">
+<h2><span class="header-section-number">5.1</span> Cabecera paquete</h2>
+<ul>
+<li>Primero se <strong>divide el mensaje en paquetes y a cada uno de estos paquetes se le añade una cabecera TCP</strong> con información sobre su orden, y un checksum para poder verificar en destino que dicho paquete es correcto.</li>
+</ul>
+</section><section id="cabecera-ip" class="slide level2">
+<h2><span class="header-section-number">5.2</span> Cabecera IP</h2>
+<ul>
+<li>Acto seguido <strong>se le añade la cabecera IP</strong> con el remitente y el destinatario del paquete.</li>
+</ul>
+</section><section id="envío" class="slide level2">
+<h2><span class="header-section-number">5.3</span> Envío</h2>
+<ul>
+<li>Luego <strong>se envían los paquetes</strong> de forma individual por la red hasta el destinatario.</li>
+</ul>
+</section><section id="recepción" class="slide level2">
+<h2><span class="header-section-number">5.4</span> Recepción</h2>
+<ul>
+<li>El destinatario <strong>reconstruye el mensaje en orden</strong>, y si detecta algún error, vuelve a pedir el reenvío de los paquetes perdidos o dañados.</li>
+</ul>
+</section></section>
+<section><section id="tcp-vs-udp" class="titleslide slide level1"><h1><span class="header-section-number">6</span> TCP vs UDP</h1></section><section id="el-protocolo-tcp" class="slide level2">
+<h2><span class="header-section-number">6.1</span> El protocolo TCP</h2>
+<ul>
+<li>El protocolo TCP es <strong>orientado a conexión</strong>, pues crea una sesión entre el origen y el destino.</li>
+<li>Su entrega es confiable, pues se encarga de volver a enviar los datos perdidos o dañados.</li>
+<li>La reconstrucción de los datos se hace de forma ordenada mediante la numeración y secuenciación de segmentos.</li>
+<li>Controla el flujo de datos, pues regula la cantidad de datos que se transmite.</li>
+<li>Es un protocolo con estado, pues realiza un seguimiento de la sesión.</li>
+</ul>
+</section><section id="el-protocolo-udp" class="slide level2">
+<h2><span class="header-section-number">6.2</span> El protocolo UDP</h2>
+<ul>
+<li>El protocolo UDP <strong>no es orientado a conexión</strong>.</li>
+<li>Su entrega no es confiable.</li>
+<li>No reconstruye los datos de forma ordenada.</li>
+<li>No hay control de flujo.</li>
+<li>Es un protocolo sin estado.</li>
+<li>Lo bueno que tiene es que su cabecera es mucho más pequeña, y por lo tanto es un protocolo más ligero y rápido.</li>
+</ul>
+</section></section>
+<section><section id="conceptos-varios" class="titleslide slide level1"><h1><span class="header-section-number">7</span> Conceptos varios</h1></section><section id="dirección-ip" class="slide level2">
+<h2><span class="header-section-number">7.1</span> Dirección IP</h2>
+<ul>
+<li>Es una serie de caracteres (numéricos en la versión 4.0 y alfanuméricos en la versión 6.0) separado por puntos, que <strong>identifica un ordenador dentro de una red</strong>.</li>
+</ul>
+</section><section id="comando-ipconfig" class="slide level2">
+<h2><span class="header-section-number">7.2</span> Comando ipconfig</h2>
+<ul>
+<li>Comando de Windows para saber nuestra IP.</li>
+</ul>
+</section><section id="comando-ifconfig" class="slide level2">
+<h2><span class="header-section-number">7.3</span> Comando ifconfig</h2>
+<ul>
+<li>Comando de Linux para saber nuestra IP.</li>
+</ul>
+</section><section id="servidor-dns" class="slide level2">
+<h2><span class="header-section-number">7.4</span> Servidor DNS</h2>
+<ul>
+<li>Un servidor DNS, <strong>convierte los nombres de los recursos en direcciones IP</strong>.</li>
+</ul>
+</section><section id="dirección-mac" class="slide level2">
+<h2><span class="header-section-number">7.5</span> Dirección MAC</h2>
+<ul>
+<li>Es la <strong>dirección física de un dispositivo</strong> y viene puesta de fábrica.</li>
+</ul>
+</section><section id="servidor-dhcp" class="slide level2">
+<h2><span class="header-section-number">7.6</span> Servidor DHCP</h2>
+<ul>
+<li>Asigna una <strong>dirección IP para cada dirección MAC</strong> de cada uno de los dispositivos conectados a un red, .</li>
+</ul>
+</section><section id="comando-ping" class="slide level2">
+<h2><span class="header-section-number">7.7</span> Comando ping</h2>
+<ul>
+<li>El comando ping funciona mandando paquetes a un dispositivo remoto, el cual responde con un eco, de tal forma que <strong>cuando recibimos el eco, sabemos con certeza que hay conectividad</strong> entre la máquina que ha hecho ping y el dispositivo remoto.</li>
+<li>Además calculando el tiempo que tarda en retornar el eco, podemos calcular la distancia al dispositivo remoto.</li>
+</ul>
+</section><section id="protocolo-http" class="slide level2">
+<h2><span class="header-section-number">7.8</span> Protocolo HTTP</h2>
+<ul>
+<li>El protocolo HTTP es el de transferencia de hipertexto (en inglés: Hypertext Transfer Protocol o HTTP) y permite las transferencias de información en la World Wide Web. Es un protocolo sin estado, es decir, no guarda ninguna información sobre conexiones anteriores, por ello es necesario el uso de cookies, que se guardan en el sistema cliente, y permiten guardar información entre peticiones diferentes.</li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="../lib/reveal.js/lib/js/head.min.js"></script>
+  <script src="../lib/reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        pdfMaxPagesPerSlide: 1,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1024,
+        height: 576,
+        // Factor of the display size that should remain empty around the content
+        margin: 0.3,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.1,
+        maxScale: 1.9,
+
+        menu: {
+            // Specifies which side of the presentation the menu will
+            // be shown. Use 'left' or 'right'.
+            side: 'left',
+
+            // Add slide numbers to the titles in the slide list.
+            // Use 'true' or format string (same as reveal.js slide numbers)
+            numbers: false,
+
+            // Specifies which slide elements will be used for generating
+            // the slide titles in the menu. The default selects the first
+            // heading element found in the slide, but you can specify any
+            // valid css selector and the text from the first matching
+            // element will be used.
+            // Note: that a section data-menu-title attribute or an element
+            // with a menu-title class will take precedence over this option
+            titleSelector: 'h1, h2, h3, h4, h5, h6',
+
+            // Hide slides from the menu that do not have a title.
+            // Set to 'true' to only list slides with titles.
+            hideMissingTitles: false,
+
+            // Add markers to the slide titles to indicate the
+            // progress through the presentation
+            markers: false,
+
+            // Specify custom panels to be included in the menu, by
+            // providing an array of objects with 'title', 'icon'
+            // properties, and either a 'src' or 'content' property.
+            custom: false,
+
+            // Specifies the themes that will be available in the themes
+            // menu panel. Set to 'false' to hide themes panel.
+            themes: [
+                { name: 'Black', theme: '../lib/reveal.js/css/theme/black.css' },
+                { name: 'White', theme: '../lib/reveal.js/css/theme/white.css' },
+                { name: 'League', theme: '../lib/reveal.js/css/theme/league.css' },
+                { name: 'Sky', theme: '../lib/reveal.js/css/theme/sky.css' },
+                { name: 'Beige', theme: '../lib/reveal.js/css/theme/beige.css' },
+                { name: 'Simple', theme: '../lib/reveal.js/css/theme/simple.css' },
+                { name: 'Serif', theme: '../lib/reveal.js/css/theme/serif.css' },
+                { name: 'Blood', theme: '../lib/reveal.js/css/theme/blood.css' },
+                { name: 'Night', theme: '../lib/reveal.js/css/theme/night.css' },
+                { name: 'Moon', theme: '../lib/reveal.js/css/theme/moon.css' },
+                { name: 'Solarized', theme: '../lib/reveal.js/css/theme/solarized.css' }
+            ],
+
+            // Specifies if the transitions menu panel will be shown.
+            transitions: true,
+
+            // Adds a menu button to the slides to open the menu panel.
+            // Set to 'false' to hide the button.
+            openButton: true,
+
+            // If 'true' allows the slide number in the presentation to
+            // open the menu panel. The reveal.js slideNumber option must
+            // be displayed for this to take effect
+            openSlideNumber: false,
+
+            // If true allows the user to open and navigate the menu using
+            // the keyboard. Standard keyboard interaction with reveal
+            // will be disabled while the menu is open.
+            keyboard: true
+        },
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: '../lib/reveal.js/plugin/notes/notes.js', async: true },
+          //{ src: '../lib/reveal.js/plugin/search/search.js', async: true },
+          { src: '../lib/reveal.js-menu/menu.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Peticiones REST</title>
+    <script>
+        let url = "https://jsonplaceholder.typicode.com/users";
+        fetch(url)
+            .then((resp) => resp.json())
+            .then((json) => {
+                let innerHTML = "Petición REST recibida<br/><br/>"
+                for (let index = 0; index < json.length; index++) {
+                    let user = json[index];
+                    innerHTML += user.username + " (" + user.email + ")<br/><br/>"
+                }
+                let result = document.getElementById("result");
+                result.innerHTML = innerHTML;
+            });
+    </script>
+</head>
+<body>
+    <h2>Peticiones REST</h2>
+    <div id="result"></div>
+</body>
+</html>

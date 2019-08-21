@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Proxies</title>
+
+  <script src="babel/browser.js"></script>
+
+  <link rel="shortcut icon" type="image/png" href="../../jasmine-standalone-2.9.1/lib/jasmine-2.9.1/jasmine_favicon.png">
+  <link rel="stylesheet" href="../../jasmine-standalone-2.9.1/lib/jasmine-2.9.1/jasmine.css">
+
+  <script src="../../jasmine-standalone-2.9.1/lib/jasmine-2.9.1/jasmine.js"></script>
+  <script src="../../jasmine-standalone-2.9.1/lib/jasmine-2.9.1/jasmine-html.js"></script>
+  <script src="../../jasmine-standalone-2.9.1/lib/jasmine-2.9.1/boot.js"></script>
+
+
+</head>
+
+  <script type="text/babel">
+    describe("tests", function() {
+
+      it('Proxies', function() {
+
+        let target = {
+            foo: "Welcome, foo"
+        }
+        let proxy = new Proxy(target, {
+            get (receiver, name) {
+                return name in receiver ? receiver[name] : `Hello, ${name}`
+            }
+        })
+        expect("...1").toEqual(proxy.foo);
+        expect("...2").toEqual(proxy.world);
+      });
+    });
+  </script>
+
+<body>
+</body>
+</html>

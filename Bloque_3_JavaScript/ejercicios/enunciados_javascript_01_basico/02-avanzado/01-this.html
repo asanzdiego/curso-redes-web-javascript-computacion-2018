@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>This y funciones</title>
+
+  <link rel="shortcut icon" type="image/png" href="../../jasmine-standalone-2.9.1/lib/jasmine-2.9.1/jasmine_favicon.png">
+  <link rel="stylesheet" href="../../jasmine-standalone-2.9.1/lib/jasmine-2.9.1/jasmine.css">
+
+  <script src="../../jasmine-standalone-2.9.1/lib/jasmine-2.9.1/jasmine.js"></script>
+  <script src="../../jasmine-standalone-2.9.1/lib/jasmine-2.9.1/jasmine-html.js"></script>
+  <script src="../../jasmine-standalone-2.9.1/lib/jasmine-2.9.1/boot.js"></script>
+
+</head>
+
+  <script>
+
+    var nombre = "Laura";
+
+    var alba = {
+      nombre: "Alba",
+      edad: 15,
+      saludo: function() {
+        return "Hola "+this.nombre;
+      }
+    };
+    
+    describe("This y funciones", function() {
+      
+      it('alba.saludo()', function() {
+        //expect(alba.saludo()).toEqual("Hola");
+      });
+
+      it('fn1()', function() {
+        var fn1 = alba.saludo;
+        //expect(fn1()).toEqual("Hola");
+      });
+
+      it('fn2()', function() {
+        var fn2 = function() {
+          return "Hola "+this.nombre;
+        };
+        //expect(fn2()).toEqual("Hola");
+      });
+
+      it('isabel.saludo())', function() {
+        var isabel = {
+          nombre: "Isabel"
+        }
+        isabel.saludo = alba.saludo;
+        //expect(isabel.saludo()).toEqual("Hola");
+      });
+
+      var adolfo = {
+        edad: 15
+      }
+      it('adolfo.saludo1())', function() {
+        adolfo.saludo1 = alba.saludo;
+        //expect(adolfo.saludo1()).toEqual("Hola");
+      });
+
+      it('adolfo.saludo2())', function() {
+        adolfo.saludo2 = function() {
+          return "Hola "+this.nombre;
+        };
+        //expect(adolfo.saludo2()).toEqual("Hola");
+      });
+    });
+  </script>
+  
+<body>
+</body>
+</html>

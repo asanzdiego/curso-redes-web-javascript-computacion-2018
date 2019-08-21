@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>DOM</title>
+
+  <link rel="shortcut icon" type="image/png" href="../../jasmine-standalone-2.9.1/lib/jasmine-2.9.1/jasmine_favicon.png">
+  <link rel="stylesheet" href="../../jasmine-standalone-2.9.1/lib/jasmine-2.9.1/jasmine.css">
+
+  <script src="../../jasmine-standalone-2.9.1/lib/jasmine-2.9.1/jasmine.js"></script>
+  <script src="../../jasmine-standalone-2.9.1/lib/jasmine-2.9.1/jasmine-html.js"></script>
+  <script src="../../jasmine-standalone-2.9.1/lib/jasmine-2.9.1/boot.js"></script>
+
+</head>
+
+  <script>
+    
+    describe("DOM", function() {
+      
+      it('getElementById', function() {
+        let element = document.getElementById("hola");
+        expect(element.innerHTML).toEqual("Mundo");
+        element.innerHTML += " Descentralizado"
+        expect(element.innerHTML).toEqual("Mundo Descentralizado");
+      });
+      
+      it('querySelector', function() {
+        let elements = document.querySelectorAll("p");
+        expect(elements.length).toEqual(2);
+        expect(elements[1].innerHTML).toEqual("A todos");
+      });
+
+    });
+  </script>
+  
+<body>
+    <p id="hola">Mundo</p>
+    <p id="adios">A todos</p>
+</body>
+</html>
